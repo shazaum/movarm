@@ -1,0 +1,6 @@
+db:
+  username: "robo"
+  password: "robolegal"
+  database: "braco"
+  host: "192.168.110.117"
+  port: "5432"

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Relatorios</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Relatorios</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+          
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
+
+         
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Registro de movimento</h5>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="text-center">
+                      <strong>Total</strong>
+                    </p>
+                    <table>
+                      <th>Direção</th>
+                      <th>Vezes</th>
+                      {% for movimento in movimentos %}
+                      <tr>
+                        {% if movimento == "moveup" %}
+                        <td>Cima</td>
+                        {% endif %}
+                        {% if movimento == "movedown" %}
+                        <td>Baixo</td>
+                        {% endif %}
+                        {% if movimento == "moveright" %}
+                        <td>Direita</td>
+                        {% endif %}
+                        {% if movimento == "moveleft" %}
+                        <td>Esquerda</td>
+                        {% endif %}
+
+                        <td>{{movimentos[movimento]}}</td>
+                      </tr>
+                      
+                      {% endfor %}
+                    </table>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </div>
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div><!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+
+{% endblock %}

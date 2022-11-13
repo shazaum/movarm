@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Dashboard</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+              <button type="button" onclick="adiciona('cima')" class="btn btn-primary">Cima</button>
+              <button type="button" onclick="adiciona('baixo')" class="btn btn-primary">Baixo</button>
+              <button type="button" onclick="adiciona('esquerda')" class="btn btn-primary">Esquerda</button>
+              <button type="button" onclick="adiciona('direita')" class="btn btn-primary">Direita</button>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-memory"></i></span>
+              <div class="info-box-content">
+                <div class="card-body p-0">
+                  <table id="memory">
+                    <tr>
+                      <td>
+                        <button type="button" onclick="adiciona('1')" class="btn btn-primary">1</button>
+                      </td>
+                      <td>
+                        <button type="button" onclick="adiciona('2')" class="btn btn-primary">2</button>
+                      </td>
+                      <td>
+                        <button type="button" onclick="adiciona('3')" class="btn btn-primary">3</button>
+                      </td>
+                    </tr>                    
+                  </table>
+                </div>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <!-- fix for small devices only -->
+          <div class="clearfix hidden-md-up"></div>
+
+         
+        </div>
+        
+      </div><!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+
+{% endblock %}
